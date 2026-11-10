@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicar Oferta | EcoRed</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">EcoRed</a>
+        <nav aria-label="Navegación del comercio">
+            <a href="panel-comercio.html">Mi Panel</a>
+            <a href="publicar-oferta.html">Publicar Oferta</a>
+            <a href="confirmar-retiro.html">Validar Retiro</a>
+            <a href="login.html">Cerrar sesión</a>
+        </nav>
+    </header>
+
+    <main class="tarjeta-login" style="max-width: 600px;">
+        <h1>Crear Nueva Oferta (CU-05)</h1>
+        <p>Publica tus alimentos excedentes. Asegúrate de incluir una foto atractiva.</p>
+
+        <!-- IMPORTANTE: enctype permite enviar archivos. action apuntará al PHP. -->
+        <form action="procesar-oferta.php" method="POST" enctype="multipart/form-data">
+            <p>
+                <label for="titulo">Nombre de la oferta:</label>
+                <input type="text" id="titulo" name="titulo" placeholder="Ej. Bolsa de panes surtidos" required>
+            </p>
+
+            <p>
+                <label for="categoria">Categoría:</label>
+                <select id="categoria" name="categoria" required style="width: 100%; padding: 10px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px;">
+                    <option value="">Seleccione...</option>
+                    <option value="panaderia">Panadería</option>
+                    <option value="fruteria">Frutería</option>
+                    <option value="restaurante">Restaurante</option>
+                </select>
+            </p>
+
+            <div style="display: flex; gap: 16px;">
+                <p style="flex: 1;">
+                    <label for="precio">Precio (B/.):</label>
+                    <input type="number" id="precio" name="precio" step="0.01" min="0.01" placeholder="Ej. 2.00" required>
+                </p>
+                <p style="flex: 1;">
+                    <label for="stock">Cantidad:</label>
+                    <input type="number" id="stock" name="stock" min="1" placeholder="Ej. 5" required>
+                </p>
+            </div>
+
+            <div style="display: flex; gap: 16px;">
+                <p style="flex: 1;">
+                    <label for="hora_inicio">Inicio de retiro:</label>
+                    <input type="time" id="hora_inicio" name="hora_inicio" required>
+                </p>
+                <p style="flex: 1;">
+                    <label for="hora_fin">Fin de retiro:</label>
+                    <input type="time" id="hora_fin" name="hora_fin" required>
+                </p>
+            </div>
+
+            <!-- Campo para la imagen -->
+            <p>
+                <label for="imagen">Foto del producto (Opcional):</label>
+                <!-- accept="image/*" limita la selección a imágenes -->
+                <input type="file" id="imagen" name="imagen" accept="image/png, image/jpeg, image/jpg" style="border: none; padding: 0;">
+                <small style="color: #666; display: block; margin-top: 4px;">Formatos permitidos: JPG, PNG. Tamaño máximo: 2MB.</small>
+            </p>
+
+            <p style="margin-top: 24px;">
+                <button type="submit" style="width: 100%;">Publicar Oferta</button>
+            </p>
+            <p style="text-align: center; margin-top: 12px;">
+                <a href="panel-comercio.html" style="color: #244d36;">Cancelar</a>
+            </p>
+        </form>
+    </main>
+
+    <footer>
+        <p>EcoRed . Menos desperdicio, más oportunidades</p>
+    </footer>
+</body>
+
+</html>

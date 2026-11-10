@@ -1,0 +1,123 @@
+/* Estilos comunes */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f7f2;
+    color: #24352b;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #244d36;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+header>a {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #244d36;
+    color: white;
+    text-align: center;
+    padding: 16px 24px;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Portada */
+.bienvenida {
+    background-color: #e4efe5;
+    padding: 48px 24px;
+    text-align: center;
+}
+
+.bienvenida h1 {
+    font-size: 32px;
+    margin: 0 0 16px;
+}
+
+.bienvenida p {
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+#como-funciona {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 32px 24px;
+}
+
+#como-funciona h2 {
+    text-align: center;
+}
+
+.pasos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.pasos article {
+    background-color: white;
+    border: 1px solid #d8e3d9;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+/* Inicio de sesión y panel de administración */
+.tarjeta-login {
+    max-width: 380px;
+    margin: 40px auto;
+    padding: 24px;
+    background-color: white;
+    border: 1px solid #d8e3d9;
+    border-radius: 12px;
+}
+
+.tarjeta-login label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.tarjeta-login input,
+.tarjeta-login button {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    font: inherit;
+}
+
+.tarjeta-login button {
+    background-color: #244d36;
+    color: white;
+    border: 0;
+    border-radius: 6px;
+}
+
+/* Vista móvil */
+@media (max-width: 650px) {
+    .pasos {
+        grid-template-columns: 1fr;
+    }
+}
