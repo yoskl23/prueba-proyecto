@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicar oferta | EcoRed</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">EcoRed</a>
+
+        <nav aria-label="Navegación del comercio">
+            <a href="panel-comercio.html">Mi panel</a>
+            <a href="publicar-oferta.html">Publicar oferta</a>
+            <a href="confirmar-retiro.html">Confirmar retiro</a>
+        </nav>
+    </header>
+    <main class="tarjeta-login">
+        <a href="panel-comercio.html">Volver a mis ofertas</a>
+
+        <h1>Publicar oferta</h1>
+        <p>Comercio: Panadería Cesarín</p>
+
+        <form>
+            <p>
+                <label for="titulo">Nombre de la oferta</label>
+                <input type="text" id="titulo" placeholder="Bolsa de panes surtidos">
+            </p>
+
+            <p>
+                <label for="descripcion">Descripcion</label>
+                <textarea id="descripcion" rows="3"></textarea>
+            </p>
+
+            <p>
+                <label for="categoria">Categoría</label>
+                <select id="categoria">
+                    <option value="">Selecciona una categoría</option>
+                    <option value="panaderia">Panadería</option>
+                    <option value="frutas">Frutas</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="precio-original">Precio original por unidad (B/.)</label>
+                <input type="number" id="precio-original" min="0.01" step="0.01">
+            </p>
+
+            <p>
+                <label for="precio-oferta">Precio de oferta por unidad (B/.)</label>
+                <input type="number" id="precio-oferta" min="0.01" step="0.01">
+            </p>
+
+            <p>
+                <label for="cantidad">Unidades disponibles</label>
+                <input type="number" id="cantidad" min="1" step="1">
+            </p>
+
+            <p>
+                <label for="inicio-retiro">Inicio del retiro</label>
+                <input type="datetime-local" id="inicio-retiro">
+            </p>
+
+            <p>
+                <label for="fin-retiro">Fin del retiro</label>
+                <input type="datetime-local" id="fin-retiro">
+            </p>
+
+            <p>
+                <label for="imagen">Imagen de la oferta</label>
+                <input type="file" id="imagen" accept="image/png,image/jpeg" aria-describedby="ayuda-imagen">
+                <small id="ayuda-imagen">
+                    Selecciona una imagen JPG o PNG. En esta maqueta no se guarda.
+                </small>
+            </p>
+            <button type="button">Publicar oferta</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>EcoRed . Menos desperdicio, más oportunidades</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel del comercio | EcoRed</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">EcoRed</a>
+
+        <nav aria-label="Navegación del comercio">
+            <a href="panel-comercio.html">Mi panel</a>
+            <a href="publicar-oferta.html">Publicar oferta</a>
+            <a href="confirmar-retiro.html">Confirmar retiro</a>
+        </nav>
+    </header>
+
+    <main class="catalogo">
+        <h1>Panel del comercio</h1>
+        <p>Comercio: Panadería Cesarín</p>
+        <p><a href="publicar-oferta.html">Nueva oferta</a></p>
+        <p><a href="confirmar-retiro.html">Confirmar retiro</a></p>
+
+        <div class="resumen-panel">
+            <p><strong>Cuenta:</strong> Aprobada</p>
+            <p><strong>Ofertas activas:</strong> 1</p>
+            <p><strong>Reservas pendientes:</strong> 1</p>
+        </div>
+
+        <section>
+            <h2>Mis ofertas</h2>
+
+            <div class="pasos">
+                <article>
+                    <h3>Bolsa de panes surtidos</h3>
+                    <p><strong>Estado:</strong> Activa</p>
+                    <p><strong>Precio por bolsa:</strong> B/. 2.00</p>
+                    <p><strong>Disponibles:</strong> 5 bolsas</p>
+                    <p><strong>Retiro:</strong> de 4:00 p.m a 6:00 p. m.</p>
+                </article>
+            </div>
+        </section>
+
+        <section aria-labelledby="reservas-recibidas">
+            <h2 id="reservas-recibidas">Reservas recibidas</h2>
+
+            <div class="tabla-contenedor">
+                <table>
+                    <caption>Reserva de ejemplo pendiente de retiro</caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Oferta</th>
+                            <th scope="col">Cantidad</th>
+                            <th scope="col">Código</th>
+                            <th scope="col">Estado</th>
+                            <th scope="col">Acción</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Bolsa de panes surtidos</td>
+                            <td>1 bolsa</td>
+                            <td>ECO-001</td>
+                            <td>Pendiente de retiro</td>
+                            <td>
+                                <a href="confirmar-retiro.html">Validar retiro</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>EcoRed . Menos desperdicio, más oportunidades</p>
+    </footer>
+</body>
+
+</html>

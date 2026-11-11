@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset=" UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear cuenta | EcoRed</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">EcoRed</a>
+    </header>
+
+    <main class="tarjeta-login">
+        <h1>Crear cuenta</h1>
+
+        <form>
+            <p>
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre">
+            </p>
+
+            <p>
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo">
+            </p>
+
+            <p>
+                <label for="tipo-cuenta">Tipo de cuenta</label>
+                <select id="tipo-cuenta">
+                    <option value="">Selecciona una opción</option>
+                    <option value="consumidor">Consumidor</option>
+                    <option value="comercio">Comercio</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="contrasena">Contraseña</label>
+                <input type="password" id="contrasena">
+            </p>
+
+            <p>
+                <label for="confirmar">Confirmar contraseña</label>
+                <input type="password" id="confirmar">
+            </p>
+
+            <button type="button">Crear cuenta</button>
+        </form>
+
+        <p>¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a>.</p>
+    </main>
+
+    <footer>
+        <p>EcoRed . Menos desperdicio, más oportunidades</p>
+    </footer>
+
+</body>
+
+</html>
